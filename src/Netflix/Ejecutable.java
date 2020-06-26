@@ -49,40 +49,59 @@ public class Ejecutable {
 		series.add(serie5);
 
 		System.out.println("***************************LISTA DE TODAS LAS PELICULAS***************************** ");
-		for (int i=0; i < peliculas.size(); i++) 
-		{
-			System.out.println(peliculas.get(i).toString());	
+		try {
+			for (int i=0; i < peliculas.size(); i++) 
+			{
+				System.out.println(peliculas.get(i).toString());	
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			System.out.println("");
 		}
-		System.out.println("");
+		
 
 		System.out.println("***************************LISTA DE TODAS LAS SERIES***************************** ");
-		for (int i=0; i < series.size(); i++) 
-		{
-			System.out.println(series.get(i).toString());	
+		
+		try {
+			for (int i=0; i < series.size(); i++) 
+			{
+				System.out.println(series.get(i).toString());	
+			}
+			System.out.println("");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
 		}
-		System.out.println("");
 		
 		//****************************************PELICULAS Y SERIES QUE SE VISUALIZARON*************************************
-		System.out.println("***************************PELICULAS Y SERIES QUE SE VISUALIZARON*****************************");
-		for (int i=0; i < peliculas.size(); i++) 
-		{
-			Pelicula miPelicula = peliculas.get(i);
-			if (miPelicula.esVisto() == true)
+		try {
+			System.out.println("***************************PELICULAS Y SERIES QUE SE VISUALIZARON*****************************");
+			for (int i=0; i < peliculas.size(); i++) 
 			{
-				System.out.println("La Pelicula: " + miPelicula.getTitulo() + " Tiempo Visualizacion: "+miPelicula.tiempoVisto);	
+				Pelicula miPelicula = peliculas.get(i);
+				if (miPelicula.esVisto() == true)
+				{
+					System.out.println("La Pelicula: " + miPelicula.getTitulo() + " Tiempo Visualizacion: "+miPelicula.tiempoVisto);	
+				}
+
 			}
 
-		}
-
-		for (int j = 0; j < series.size(); j++) 
-		{
-			Serie miSerie = series.get(j);
-			if (miSerie.esVisto() == true)
+			for (int j = 0; j < series.size(); j++) 
 			{
-				System.out.println("La Serie: " + miSerie.getTitulo() + " Tiempo Visualizacion: "+miSerie.tiempoVisto);			
+				Serie miSerie = series.get(j);
+				if (miSerie.esVisto() == true)
+				{
+					System.out.println("La Serie: " + miSerie.getTitulo() + " Tiempo Visualizacion: "+miSerie.tiempoVisto);			
+				}
 			}
+			System.out.println("");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
 		}
-		System.out.println("");
+		
 
 
 		//****************************************PELICULA MAS RECIENTE Y SERIE CON MAS TEMPORADAS *************************************
