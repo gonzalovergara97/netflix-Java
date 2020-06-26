@@ -84,12 +84,4 @@ public class Serie extends SuperClaseNetlix implements IVisualizable
 			tiempoVisto = tiempo;
 			return this.tiempoVisto;
 		}
-	
-	
-	
-	
-	
-	
-	
-	
 }

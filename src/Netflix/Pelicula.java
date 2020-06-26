@@ -84,17 +84,4 @@ public class Pelicula extends SuperClaseNetlix implements IVisualizable
 		return this.tiempoVisto;
 	}
 
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

@@ -50,8 +50,4 @@ public class SuperClaseNetlix {
 		this.duracion = duracion;
 	}
 	
-	
-	
-	
-	
 }
